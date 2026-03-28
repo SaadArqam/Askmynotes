@@ -60,7 +60,7 @@ export default function StudyPage() {
     useEffect(() => {
         const fetchSessions = async () => {
             try {
-                const apiUrl = "https://askmynotes-mavericks.onrender.com";
+                const apiUrl = "https://askmynotesmavericks.onrender.com";
                 const res = await fetch(`${apiUrl}/api/chat/sessions`);
                 if (res.ok) {
                     const data = await res.json();
@@ -80,7 +80,7 @@ export default function StudyPage() {
         setRevealedMcqs({});
 
         try {
-            const apiUrl = "https://askmynotes-mavericks.onrender.com";
+            const apiUrl = "https://askmynotesmavericks.onrender.com";
             const response = await fetch(`${apiUrl}/api/study/practice`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

@@ -100,7 +100,7 @@ export default function ChatPage() {
 
     const fetchSessions = useCallback(async () => {
         try {
-            const apiUrl = "https://askmynotes-mavericks.onrender.com";
+            const apiUrl = "https://askmynotesmavericks.onrender.com";
             const response = await fetch(`${apiUrl}/api/chat/sessions`);
             if (response.ok) {
                 const data = await response.json();
@@ -160,7 +160,7 @@ export default function ChatPage() {
                 ? `Researching specifically about "${selectedTopic}": ${textToSend}`
                 : textToSend;
 
-            const apiUrl = "https://askmynotes-mavericks.onrender.com";
+            const apiUrl = "https://askmynotesmavericks.onrender.com";
             const response = await fetch(`${apiUrl}/api/chat`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -205,7 +205,7 @@ export default function ChatPage() {
     const deleteSession = async (id: string, e: React.MouseEvent) => {
         e.stopPropagation();
         try {
-            const apiUrl = "https://askmynotes-mavericks.onrender.com";
+            const apiUrl = "https://askmynotesmavericks.onrender.com";
             const res = await fetch(`${apiUrl}/api/chat/sessions/${id}`, { method: "DELETE" });
             if (res.ok) {
                 setSessions(prev => prev.filter(s => s.id !== id));

@@ -103,7 +103,7 @@ export function NotesVisualizer({
       formData.append("optional_description", subjectDesc);
 
       try {
-        const apiUrl = "https://askmynotes-mavericks.onrender.com";
+        const apiUrl = "https://askmynotesmavericks.onrender.com";
         const response = await fetch(`${apiUrl}/api/upload`, {
           method: "POST",
           body: formData,

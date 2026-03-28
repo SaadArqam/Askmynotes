@@ -87,7 +87,7 @@ export default function VoicePage() {
         setIsProcessing(true);
         setAiResponse("");
         try {
-            const apiUrl = "https://askmynotes-mavericks.onrender.com";
+            const apiUrl = "https://askmynotesmavericks.onrender.com";
             const response = await fetch(`${apiUrl}/api/chat`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
